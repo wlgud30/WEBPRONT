@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>리스트 정의하기</title>
+<style type="text/css">
+	*{
+		margin: 0;  /*요소의 바깥쪽공백*/
+		padding: 0; /*요소의 안쪽 공백*/
+	}
+	body{
+		font-size: 12px;
+		font-family: 맑은고딕,돋움;
+		text-decoration: #333;
+	}
+	ul{
+		line-height : 1.8em;
+		margin-left: 20px;
+		list-style:none;
+	}
+	li{
+		padding-left:15px;
+		list-style-image: url("images/bullet11.jpg");
+		border-image-repeat: no-repeat;
+		position: 0.8px;
+	}
+</style>
+</head>
+<body>
+	<ul class="root" >
+		<li>리스트 스타일</li>
+		<li>리스트 스타일</li>
+			<ul>
+				<li>리스트 스타일</li>
+				<li>리스트 스타일</li>
+					<ul>
+						<li>리스트 스타일</li>
+						<li>리스트 스타일</li>
+						<li>리스트 스타일</li>
+						<li>리스트 스타일</li>
+					</ul>
+				<li>리스트 스타일</li>
+				<li>리스트 스타일</li>
+			</ul>
+		<li>리스트 스타일</li>
+		<li>리스트 스타일</li>
+	</ul>
+</body>
+</html>

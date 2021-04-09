@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>멤버십 가입</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    </head>
+    <style>
+        [type]{
+            background-color: beige;
+        }
+        input[type="text"]{
+            background-color: lightgreen;
+        }
+        input:enabled{
+            background-color: white;
+        }
+        
+        input:disabled{
+            background-color: lightgray;
+        }
+
+        input:focus{
+            background-color: orange;
+        }
+
+
+    </style>
+    <body>
+        <h1>멤버십 가입</h1>
+        <!--서버로 데이터 전송을 위해 사용자 입력을 받는 입력 태그-->
+
+        <!--FORM 태그 속성 
+            method : 서버로 데이터 전송을 위한 전송방식(get(defult),post)
+            action : 폼 데이터를 처리할 서버 페이지의 주소
+        -->
+        <form method="post" action="target.html">
+            <!--입력 양식 그룹화-->
+            <fieldset>
+                <!--legend : 입력양식 그룹의 제목-->
+                <legend>회원가입</legend>
+                <!--입력 필드 설명 for값이 input의 id값과 같아야한다-->
+                <label for="userid">아이디</label>
+                <!--type 이 생략되면 text(기본값)-->
+                <input name="userid" id="userid" type="text"/><br/>
+                <!--입력 필드의 name 속성 : 서버 전송시 사용, id 속성 : html 내에서 해당 요소를 식별하기 위해 사용-->
+                <label for ="pw">비밀번호</label>
+                <input type="password" name="pw" id="pw"/><br/>
+                <!--입력 필드에 값을 부여할때는 value  속성 사용-->
+                <input type="hidden" name="code" value="secret_code"/>
+                <label for="recom">추천인</label>
+                <input type="text" name="recom" id="recom" value="홍길동" disabled/><br/>
+                <!--disabled 속성이 있으면 해당 입력 상자는 사용 불가-->
+                <label>성별</label>
+                <!--같은 name을 가진 radio 중에서 한개만 선택-->
+                <input type="radio" name="gender" value="male" checked/> 남
+                <input type="radio" name="gender" value="femail"/>여<br/>
+                <label>선호 음료</label>
+                <input type="checkbox" name="favorite" value="americano"/>아메리카노
+                <input type="checkbox" name="favorite" value="latte"/>라떼
+                <input type="checkbox" name="favorite" value="ade"/>에이드
+                <input type="checkbox" name="favorite" value="tea"/>녹차
+                <br/>
+
+                <label for="telecom">통신사</label>
+                <select name="telecom" id="telecom">
+                    <option value="S">skt</option>
+                    <option value="K">kt</option>
+                    <option value="L">lg</option>
+                    <option value="E">기타</option>
+                </select>
+                <br/>
+
+                <input type="submit" value="멤버십 가입">
+                <input type="reset" value="다시 작성"/>
+
+            </fieldset>
+        </form>
+    </body>
+</html>

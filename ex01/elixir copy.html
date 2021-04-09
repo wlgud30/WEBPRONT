@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+		<title>Bit Lounge 건강음료</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <style>
+      /*구조 선택자*/
+      .menu>li:first-child{
+        background-color: #0000FF20;
+      }
+      /*요소 자식 li 중 두번째 형제*/
+      .menu>li:nth-child(2){
+        background-color: RGBA(127,0,127,0.1);
+      }
+      /*요소의 자식 li중에서 두번째*/
+      .menu>li:nth-child(3){
+        background-color: plum;
+      }
+      /*요소의 자식 li 중에서 마지막*/
+      .menu>li:last-child{
+        background-color: #F002;
+      }
+
+      .menu > li{
+        float:left;
+        width:100px;
+        height:25px;
+        list-style-type: none;
+        text-align: center;
+        margin-bottom:10px;
+      }
+
+      .beverage > h2{
+        /*브라우저의 기본 폰트 사이즈는 16px
+         절대단위 px : 화면에 표시되는 점 한개
+         font-size : 24px;
+         상대단위 % : 비율 백분율
+         font-size: 150%;
+         상대단위 em : 배율
+         font-size : em 1.5;*/
+         font-size : em 1.5;
+        
+
+      }
+      body{
+        font-family: '맑은 고딕',돋움,sans-serif;
+      }
+
+      .beverage{
+        /*개별 속성을 적용할 때는 접미사 붙임*/
+        border-width: 3px;
+        border-style: dashed;
+        border-color: gray;
+        /*
+        border : 3px dashed gray;
+        일괄 적용 width style color 순
+        */
+      }
+      .beverage img{
+        padding: 10px;
+      }
+
+      .beverage h2{
+        /*값이 2개 위 - 아래 왼쪽-오른쪽*/
+        margin: 0 10px;
+      }
+
+      .beverage p{
+        /*값이 4개 위 오른쪽 아래 왼쪽 순*/
+        margin : 1 1 1 1px;
+      }
+      .seller img{
+        width: 100px;
+        padding : 20px;
+        border-radius: 20px;
+        border-radius:10px 20px 30px 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--시맨틱 태그는 div의 일종이지만 구체적인 의미를 가지는 공간 점유 태그다-->
+    <header>
+      <h1>건강 음료</h1>
+    </header>
+    <nav><!--  -->
+    <!--리스트를 활용한 메뉴-->
+      <ul class="menu">
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Purple</li>
+        <li>Red</li>
+      </ul>
+    </nav>
+    <article><!--article : 실제 컨텐츠를 표시하는 시맨틱 태그-->
+      <div class="seller">
+        <img src="./images/Penguins.jpg"alt="Seller"/>
+      </div>
+      <section id="green"><!--내부 섹션을 구분하는 시맨틱 태그-->
+        <div></div>
+        <h2>Green Tea Cooler</h2>
+        <img src="images/green.jpg">
+        <p>
+          Chock full of<span class="feature">vitamins and minerals</span>, this elixir combines the healthful benefits of green tea with a twist of chamomile blossoms and ginger root.
+        </p>
+      </section>
+      <section id="blue">
+        <div class="beverage blue">
+          <h2>Raspberry Ice Concentration</h2>
+          <img src="images/lightblue.jpg">
+          <p>
+            Combining raspberry juice with lemon grass, citrus peel and rosehips, this icy drink will make your mind feel clear and crisp.
+          </p>
+        </div>
+      </section>
+      <section id="purple">
+        <div class="deverage purple">
+          <h2>Blueberry Bliss Elixir</h2>
+          <img src="images/blue.jpg">
+          <p> 
+            Blueberries and cherry essence mixed into a base of elderflower herb tea will put you in a relaxed state of bliss in no time.
+          </p>
+        </div>
+      </section>
+      <section id="red">
+        <div class="deverage red">
+          <h2>Cranberry Antioxidant Blast</h2>
+          <img src="images/red.jpg">
+          <p>
+            Wake up to the flavors of cranberry and hibiscus in this vitamin C rich elixir.
+          </p>
+        </div>
+      </section>
+      <nav>
+        <p>
+            <a href="index copy.html">메인으로 돌아가기</a>
+        </p>
+      </nav>
+      <footer>&copt; Bit Lounge, 2021</footer>
+    </article>
+  </body>
+</html>

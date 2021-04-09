@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>리스트를 이용한 메뉴 만들기</title>
+<style type="text/css">
+    *{
+		margin: 0;  /*요소의 바깥쪽공백*/
+		padding: 0; /*요소의 안쪽 공백*/
+	}
+	body{
+		font-size: 12px;
+		font-family: 맑은고딕,돋움;
+		text-decoration: #333;
+	}
+    .tab-box{
+        margin-top :20px;
+        margin-left: auto;
+        margin-right : auto;
+        width: 520px;
+    }
+    ul{
+        list-style-type: none;
+        height: 27px;
+    }
+    li{
+        float: left;
+        width:100px;
+        height:22px;
+        border:1px solid #999;
+        background-color: #ccc;
+        text-align: center;
+        padding-top: 3px;
+        margin-right: 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .tab-box > div{
+        margin-top:-1px;
+        text-align:center;
+        line-height:200px;
+        width:516px;
+        border:1px solid;
+    }
+    .selected{
+        background-color: orange;
+    }
+</style>
+<script src="" type="text/javascript"></script>
+</head>
+<body>
+<div class="tab-box">
+	<ul>
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+        <li>메뉴 3</li>
+        <li class="selected">메뉴 4</li>
+        <li>메뉴 5</li>
+    </ul>
+    <div>
+    	탭뷰입니다.
+    </div>
+</div>    
+</body>
+</html>
